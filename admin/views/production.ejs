@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('header.ejs') -%>
+  <title>Production</title>
+<body style="background-color: #f3f3f3;">
+  <%- include('navbar.ejs') -%>
+
+    <div class="product_main" style="overflow: scroll;" id="pro_main">
+        <h3>PRODUCT DETAILS</h3>
+        <div class="pro_party">
+            <input type="text" name="search_name" id="search_here" onkeyup="myFunction()" placeholder="Search Name">
+            <a href="/api/admin/addproduct" id="acc_link" style="text-decoration: none; padding: 5px 20px;"><b>ADD</b></a>
+        </div>
+        <div class="pro_table_party">
+          <table class="table" id="main_table">
+            <thead>
+              <tr>
+                <th>PARTY NAME</th>
+                <th>AMOUNT</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <%if(product_details.length > 0){ %>
+                <% product_details.forEach( details => {%>
+              <tr>
+                <td><%= details.name %></td>
+                <td>$<%= details.pro_price %></td>
+                <td>  <button type="button" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent" class="drop_btn_ed">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                   <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                 </svg>
+               </button>
+               <ul id="nav_dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                 
+                 <li><a class="dropdown-item" href="/api/admin/edit_product/<%= details.id %>">EDIT</a></li>
+                 <li ><form action="/api/admin/production/<%= details.id %>" method="post" ><input id="acc_delete" type="submit" value="DELETE"></form></li>
+                
+               </ul></td>
+              </tr>
+            </tbody>
+            <% }) %>    
+            <% } %>  
+          </table>
+        </div>
+    </div>
+
+    <div class="pro_table_details" style="overflow: scroll;" id="pro_side">
+        <h3>CLIENT DETAILS</h3>
+       
+        <table class="table">
+            <thead>
+              <th>Name</th>
+              <th>Mobile No</th>
+              <th>product Name</th>
+              <th>Product type</th>
+              <th>Product quantity</th>
+              <th>Date</th>
+              <th>Product Price</th>
+            </thead>
+            <%if(product_details.length > 0){ %>
+              <% product_details.forEach( details => {%>             
+            <tbody>
+              <tr>
+                <td><%= details.name %></td>
+                <td><%= details.mobile_no%></td>
+                <td><%= details.pro_name %></td>
+                <td><%= details.pro_type %></td>
+                <td><%= details.pro_quan %></td>
+                <td><%= details.pro_date %></td>
+                <td>$<%= details.pro_price %></td>          
+              </tr>
+            </tbody>
+         <% }) %>
+         <%  } %>
+        </table>
+    </div>
+
+    <script src="/js/search.js"></script>
+    <script src="/js/product.js"> </script>
+
+</body>
+</html>

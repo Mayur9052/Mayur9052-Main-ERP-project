@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+      <title>Softwares</title>
+<body style="background-color: #f3f3f3;">
+    <%- include('navbar.ejs') -%>
+    <h2 class="text-white" style="position: absolute; left: 70px;">PROJECTS </h2>   
+    <a href="/api/admin/project" id="software_btn">Add project  </a>
+    <div class="software_main" >
+        
+        <% if(software_details.length >0) { %>
+            <% software_details.forEach( details => { %> 
+                
+        <div class="software_details">
+                    
+
+            <p><b>Full Name : </b><%= details.name %></p>  
+            <p><b>Email : </b><%= details.email %></p>  
+            <p><b>project Name : </b><%= details.projectname %></p>
+            <p><b>Languages :</b><%= details.languages %></p>
+            <p><b>Link : </b><a href="<%= details.link %>" target="_blank"><%= details.link %></a></p>
+            <p><b>Report :</b><%= details.report %></p>
+            
+            <a href="/api/admin/edit_project/<%= details.id %>" id="soft_edit">Edit</a>
+            <form action="/api/admin/software/<%= details.id %>" method="post" ><input id="soft_delete" type="submit" value="Delete"></form>
+        </div>
+        <% }) %>    
+        <% } %> 
+    </div>
+  
+
+    <script src="/js/software.js"> </script>
+       
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('header.ejs') -%>
+    <title>Add Project</title>
+</head>
+<body style="background-color: #f3f3f3;">
+  <%- include('navbar.ejs') -%>
+    
+    <div class="project_main" id="project_body">
+        <h2>ADD PROJECT</h2>
+
+        <div class="project_details">
+            <form action="/api/client/project" method="post">
+                <input type="text" name="proj_name" placeholder="Enter Name"><b>Full Name</b>
+                <br>
+                <input type="email" name="project_email" placeholder="Enter Email"><b>Email</b>
+                <br>
+                <input type="text" name="project_name" placeholder="Enter Project Name"><b>Project Name</b>
+                <br>
+                <textarea type="text" name="project_language" cols="40" rows="7" placeholder="Enter Languages"></textarea><b id="pro_b1">Languages</b>
+                <br>
+                
+                <div class="project_report">
+                    <input type="text" name="project_link" placeholder="Enter Project Name"><b id="project_b2">Project Link</b>
+                    <br>
+                    <textarea typr="link" name="project_report" cols="40" rows="13"></textarea><b>Project Report</b>
+                </div>
+                
+                <input type="submit"  name="submit" id="project_btn">
+            </form>    
+        </div>
+    </div>
+
+    <script src="/js/project.js"></script>
+</body>
+</html>

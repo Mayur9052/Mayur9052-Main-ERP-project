@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Employee</title>
+<body style="background-color: #f3f3f3;">
+    <%- include('navbar.ejs') -%>
+    <div class="emp_main">   
+        <h2>PROFILE</h2>
+
+        
+        <div class="emp_img">
+            <img src="/img/demo_user.png" alt="" width="230" height="260">
+        </div>
+
+        <% if(Employee.length > 0) { %>
+            <% Employee.forEach ( details => {%> 
+        <div class="emp_about">        
+            
+            <b>Qualification :</b><br>
+            <p><%= details.qualification %></p>
+            <br><br>
+            <b>Experience</b>
+            <p><%= details.experience %></p>
+            <br><br>
+            <b>Interest</b>
+            <p><%= details.interest %></p>
+
+        </div>
+
+        <div class="emp_details1">
+            <b>Name</b><br>
+            <p><%= details.name %></p>
+            <br>
+            <b>Uid</b><br>
+            <p><%= details.enroll %></p>
+            <br>
+            <b>position</b><br>
+            <p><%= details.position %></p>
+            <br>
+            <b>Department</b><br>
+            <p><%= details.department %></p>
+            <br>
+            <b>Email</b><br>
+            <p><%= details.email %></p>
+            <br><br>
+           
+        </div>
+        <div class="emp_details2">
+            <b>Mobile No</b><br>
+            <p><%= details.mobileno %></p>
+            <br>
+            <b>Age</b><br>
+            <p><%= details.age %></p>
+            <br>
+            <b>Address</b><br>
+            <p><%= details.address %> </p>
+            <br>
+            <b>DOB</b><br>
+            <p><%= details.dob %></p>
+            <br>
+            <b>Gender</b><br>
+            <p><%= details.gender %></p>
+            <br>         
+        </div>
+        <% }) %>
+        <% } %>    
+    </div>
+
+
+</body>
+</html>

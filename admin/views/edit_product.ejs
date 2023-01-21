@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Edit Product</title>
+<body style="background-color: #f3f3f3;">
+    <%- include('navbar.ejs') -%>
+<div class="pro_edit_main" id="edit_product">
+  <div class="pro_edit_details">
+      <h2>Edit Product Information</h2>
+      <form action="/api/admin/edit_product/<%= product_details.id %>" method="post">
+      <div class="pro_edit_detail">
+          <p ><b>Name</b><input type="text" name="pro_name" id="name" placeholder="Enter Name" value="<%= product_details.name %>" required></p>
+      </div>
+      <div class="pro_edit_detail">
+          <p ><b>Mobile No</b><input type="text" name="pro_mobileno" id="email" placeholder="Enter Mobile" required value="<%= product_details.mobile_no %>"></p>
+      </div>
+      <div class="pro_edit_detail">
+          <p ><b>Product Name</b><input type="text" name="pro_productname" id="pid" placeholder="Enter Product Name" required value="<%= product_details.pro_name %>"></p>
+      </div>
+      <div class="pro_edit_detail">
+          <p ><b>Product Type</b><input type="text" name="pro_producttype" placeholder="Enter Product No" required value="<%= product_details.pro_type %>"></p>
+      </div>
+ 
+    
+  </div>
+  <div class="pro_edit_details_two">
+      <div class="pro_edit_detail1">
+        <p><b>Product Quantity</b><input type="text" name="pro_quantity" placeholder="Enter Product Quantity" required value="<%= product_details.pro_quan %>"></p>
+      </div>
+      <div class="pro_edit_detail1">
+        <p ><b>date</b><input type="text" name="pro_date" placeholder="Enter DD/MM/YYYY" required value="<%= product_details.pro_date %>"></p>
+      </div>
+      <div class="pro_edit_detail1">
+        <p ><b>Price</b><input type="text" name="pro_price" placeholder="Enter price" required value="<%= product_details.pro_price %>"></p>
+      </div>
+  </div>
+    <input type="submit" name="Edit" id="pro_edit_button">
+  </div>
+</form>
+<script src="/js/editproduct.js"> </script>
+
+</body>
+</html>

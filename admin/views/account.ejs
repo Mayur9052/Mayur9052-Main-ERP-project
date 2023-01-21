@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <%- include('header.ejs') -%>
+  <title>Account</title>
+ </head>
+<body style="background-color: #f3f3f3;">
+  <%- include('navbar.ejs') -%>
+
+  <div class="account_main" style="overflow: scroll;" id="acc_main">
+        <h3>ACCOUNT DETAILS</h3>
+        <div class="acc_party">
+            <input type="text" name="search_name" id="search_here"  onkeyup="myFunction()"  placeholder="Search Name">
+          <a href="/api/admin/addaccount" id="acc_link" style="text-decoration: none; padding: 5px 20px;"><b>ADD</b></a>
+        </div>
+        <div class="acc_table_party">
+          <table class="table" id="main_table">
+            <thead>
+              <tr>
+                <th>PARTY NAME</th>
+                <th>AMOUNT</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+               <% if(Account_details.length > 0) { %>
+                <% Account_details.forEach( details => {%> 
+              <tr>
+                <td><%= details.acc_name %></td>
+                <td><%= details.total_ammount %></td>
+                <td>
+                <button type="button" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent" class="drop_btn_ed">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                  <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                </svg>
+              </button>
+              <ul id="nav_dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                
+                <li><a class="dropdown-item" href="/api/admin/edit_account/<%= details.id %>">EDIT</a></li>
+                <li ><form action="/api/admin/account/<%= details.id %>" method="post" ><input id="acc_delete" type="submit" value="DELETE"></form></li>
+               
+              </ul>
+              </td>
+              </tr>
+              </tbody>
+              <% }) %>    
+              <% } %>  
+          </table>
+        </div>
+    </div>
+
+    <div class="acc_table_details" style="overflow: scroll;" id="acc_side">
+        <h3>TRANSACTION DETAILS</h3>
+        <table class="table" id="main_table">
+            <thead>
+              <th>Name</th>
+              <th>Mobile No</th>
+              <th>Account Name</th>
+              <th>Account No</th>
+              <th>Account IFSC Code</th>
+              <th>Total Amount</th>
+              <th>Date</th>
+            </thead>
+            <% if(Account_details.length > 0) { %>
+              <% Account_details.forEach( details => {%> 
+            <tbody>
+              <tr>
+                           
+                <td><%= details.acc_name %></td>
+                <td><%= details.mobile_no %></td>
+                <td><%= details.account_name %></td>
+                <td><%= details.account_no %></td>
+                <td><%= details.account_ifsc_no %></td>
+                <td><%= details.total_ammount %></td>
+                <td><%= details.order_date %></td>
+              </tr>
+            </tbody>
+
+            <% }) %>    
+            <% } %>    
+        </table>
+    </div>
+
+   <script src="/js/search.js"></script>
+   <!-- <script src="/js/color.js"> </script> -->
+    <script src="/js/account.js"></script>
+</body>
+</html>

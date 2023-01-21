@@ -1,0 +1,14 @@
+1. login - admin and client 
+2. signup - admin (table)
+3. contact - client (table) 
+4. account - admin and client (table)
+5. dashboard - admin 
+6. employee profile - client (table) 
+7. employee edit - client 
+8. feedback - client (table)
+9. production - admin and client (table) 
+10. software - admin and client 
+11. add account - admin
+12. add production - admin
+13. forgot password - admin and client 
+14. leave form - client (table)

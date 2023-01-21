@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('header.ejs') -%>
+  <title>Employee Details</title>
+<body style="background-color: #f3f3f3;">
+
+<%- include('navbar.ejs') -%>
+
+    <div class="employee_main" id="employee_details">
+      <div class="employee_details">
+        <h2>EMPLOYEE DETAILS</h2>
+        <div class="employee_table_side">
+          <input type="text" name="search_name_side" id="search_here" onkeyup="myFunction()" placeholder="Search Here">
+        </div>
+        <table class="table" id="main_table">
+            <thead id="employee_header">
+              <tr>
+
+              <th>Name</th>
+              <th>UId</th>
+              <th>Position</th>
+              <th>Department</th>
+              <th>Email</th>
+           
+              <th>Mobile No</th>
+              <th>Qualification</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>DOB</th>
+              <th>Gender</th>
+              <th>Experience</th>
+              <th>Interest</th>
+              <th></th>
+              </tr>
+            </thead>
+            <% if(Employee_details.length > 0) { %>
+              <% Employee_details.forEach( details => {%> 
+            <tbody>
+              <tr>
+                <td><%= details.name %></td>
+                <td><%= details.enroll %></td>
+                <td><%= details.position %></td>
+                <td><%= details.department %></td>
+                <td><%= details.email %></td>
+               
+                <td><%= details.mobileno %></td>
+                <td><%= details.qualification %></td>
+                <td><%= details.age %></td>
+                <td><%= details.address %></td>
+                <td><%= details.dob %></td>
+                <td><%= details.gender %></td>
+                <td><%= details.experience %></td>
+                <td><%= details.interest %></td>
+                <td><button type="button" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent" class="drop_btn_ed">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                   <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                 </svg>
+               </button>
+               <ul id="nav_dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                 
+                 <li><a class="dropdown-item" href="/api/admin/edit_employee/<%= details.id %>">EDIT</a></li>
+                 <li><form action="/api/admin/all_employee/<%= details.id %>" method="post" ><input id="acc_delete" type="submit" value="DELETE"></form></li>
+                
+               </ul></td>
+              </tr>
+            </tbody>
+            <% }) %>    
+            <% } %> 
+        </table>
+    </div>
+    </div>
+    <script src="/js/search.js"></script>
+    <script src="/js/empdetails.js"> </script>
+
+</body>
+</html>

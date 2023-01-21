@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+          
+            <div class="form-control">  
+                <ul>
+                
+                <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+
+                    <li class="alert alert-danger" role="alert" style="position: relative; left: -20px; text-decoration: none;" ><%= error.message %></li>
+                    <% }) %> <% } %>
+                </ul>
+                <ul>
+    
+                    <% if(messages.success_msg){ %>
+                        <li class="alert alert-success" role="alert" style="position: relative; left: -20px; text-decoration: none;"><%= messages.success_msg %></li>
+                    <% } %>
+                </ul>
+                <ul>
+                    <% if(messages.error){ %>
+                        <li class="alert alert-danger" role="alert" style="position: relative; left: -20px; text-decoration: none;"><%= messages.error %></li>
+                    <% } %>
+                </ul>
+
+                <form action="/api/admin/" method="post">
+                    <h1 class="text-primary"> USER LOGIN </h1>
+                   <div class="input1">
+                    <b id="b1">Email</b><input type="email" style="outline: none;" class="form-input mt-4" name="email" id="emp_username" required placeholder="Enter Email" >
+                   </div>
+                    <br>
+                    <div class="input2">
+                        <b id="b2">Password</b><input type="password" style="outline: none;" class="form-input mt-3" name="password" id="emp_password" required placeholder="Enter Password">
+                    </div>
+                    <br>
+                    <a class="fp" href="#">Forgot password?</a>
+                    <button id="btn1">LOGIN</button> </a><br>
+                    <a class="signup" href="/api/admin/signup">Add User?</a>
+                </form>
+            </div>  
+        </div>
+    </div>
+    
+</body>
+</html>

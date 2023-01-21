@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.signup_main {
+    background-color: white;
+    width: 1390px;
+    height: 630px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    left: 70px;
+}
+
+.signup_main h1 {
+    color: #273c75;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.signup_details1 {
+    padding: 10px 40px;
+
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.signup_details1 input {
+    padding: 12px 120px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 1px solid #273c75;
+}
+
+.signup_details1 b {
+    position: relative;
+    left: -280px;
+    top: -23px;
+    
+    font-size: 16px;
+    background-color: white;
+    padding: 0 10px;
+    color: #273c75;
+}
+
+
+.signup_details2 {
+    padding: 10px 40px;
+
+    position: absolute;
+    top: 88px;
+    left: 440px;
+}
+
+.signup_details2 input {
+    padding: 12px 130px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 1px solid #273c75;
+}
+
+.signup_details2 b {
+    position: relative;
+    left: -280px;
+    top: -23px;
+    
+    font-size: 16px;
+    background-color: white;
+    padding: 0 10px;
+    color: #273c75;
+}
+
+
+.signup_details3 {
+    padding: 10px 40px;
+
+    position: absolute;
+    top: 88px;
+    right: -60px;
+}
+
+.signup_details3 textarea {
+    padding: 12px 150px;
+    padding-left: 10px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    border: 1px solid #273c75;
+}
+
+.signup_details3 textarea:focus {
+    outline: none;
+}
+
+.signup_details3 b {
+    position: relative;
+    left: -380px;
+    top: -133px;
+    
+    font-size: 16px;
+    background-color: white;
+    padding: 0 10px;
+    color: #273c75;
+}
+
+#signup_submit {
+    background-color: #273c75;
+    border: 1px solid #273c75;
+    color: white;
+    padding: 7px 25px;
+    position: relative;
+    left: 650px;
+    text-transform: uppercase;
+}
+
+#signup_submit:hover {
+    background-color: white;
+    border: 1px solid #273c75;
+    color: #273c75;
+    transition-duration: 0.3s;
+} 

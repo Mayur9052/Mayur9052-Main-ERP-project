@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Add Account</title>
+<body style="background-color: #f3f3f3;">
+    <%- include('navbar.ejs') -%>
+    <div class="acc_edit_main" id="add_account">
+      <div class="acc_edit_details">
+          <h2>ADD account Information</h2>
+          <form action="/api/client/addaccount" method="post">
+          <div class="acc_edit_detail">
+              <p ><b>Name</b><input type="text" name="acc_name" id="name" placeholder="Enter Name" required></p>
+          </div>
+          <div class="acc_edit_detail">
+              <p ><b>Mobile No</b><input type="text" name="acc_mobileno" id="email" placeholder="Enter Mobile" required></p>
+          </div>
+          <div class="acc_edit_detail">
+              <p ><b>Account Name</b><input type="text" name="acc_accountname" id="pid" placeholder="Enter Account Name" required></p>
+          </div>
+          <div class="acc_edit_detail">
+              <p ><b>Account No</b><input type="text" name="acc_accountno" id="mobile" placeholder="Enter Account No" required></p>
+          </div>
+     
+        
+      </div>
+      <div class="acc_edit_details_two">
+          <div class="acc_edit_detail1">
+            <p><b>Account IFSC</b><input type="text" name="acc_code" id="mobile" placeholder="Enter Account IFSC" required></p>
+          </div>
+          <div class="acc_edit_detail1">
+            <p ><b>Total Amount</b><input type="text" name="acc_ammount" id="mobile" placeholder="Enter Amount" required></p>
+          </div>
+          <div class="acc_edit_detail1">
+            <p ><b>Date</b><input type="text" name="acc_date" id="mobile" placeholder="Enter DD/MM/YYYY" required></p>
+          </div>
+      </div>
+        <input type="submit" name="submit" id="acc_edit_button">
+      </div>
+    </form>
+
+    <script src="/js/addaccount.js"></script>
+</body>
+</html>

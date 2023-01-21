@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* dashboard  */
+
+.dash_body_dark {
+    background-color: black !important;
+    color: white;
+}
+
+.dash_bills_dark p{
+    color: black;
+}
+
+.dash_bills_dark b{
+    color: black !important;
+}
+
+.dash_bills_dark i{
+    color: black !important;
+}
+
+.dash_bills_dark svg{
+    color: black !important;
+}
+
+/* nav bar  */
+.nav_body_dark {
+    background-color: black;
+    color: white;
+}
+
+.nav_body_dark button {
+    position: relative;
+    background-color: black;
+}
+
+.nav_body_dark a {
+    position: relative;
+    background-color: black;
+}
+
+.nav_body_dark img {
+    background-color: url('../img/logo_light.png');
+    
+}
+
+/* account  */
+
+.acc_main_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.acc_main_dark h3{
+    color: white !important;
+}
+
+.acc_main_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.acc_main_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.acc_main_dark li {
+    background-color: black;
+}
+
+.acc_main_dark input {
+    background-color: black !important;
+}
+
+/* account side  */
+
+.acc_main_dark_side {
+    background-color: black !important;
+    color: white !important;
+}
+
+.acc_main_dark_side h3{
+    color: white !important;
+}
+
+.acc_main_dark_side table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+/* product  */
+
+.pro_main_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.pro_main_dark h3{
+    color: white !important;
+}
+
+.pro_main_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.pro_main_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.pro_main_dark li {
+    background-color: black;
+}
+
+.pro_main_dark input {
+    background-color: black !important;
+}
+
+/* product side  */
+
+.pro_main_dark_side {
+    background-color: black !important;
+    color: white !important;
+}
+
+.pro_main_dark_side h3{
+    color: white !important;
+}
+
+.pro_main_dark_side table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+/* addccount page  */
+
+.add_account_dark {
+    background-color: black;
+    color: white;
+}
+
+.add_account_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.add_account_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.add_account_dark h2 {
+    color: white !important;
+}
+
+/* editccount page  */
+
+.edit_account_dark {
+    background-color: black;
+    color: white;
+}
+
+.edit_account_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.edit_account_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.edit_account_dark h2 {
+    color: white !important;
+}
+
+
+/* addproduct page  */
+
+.add_product_dark {
+    background-color: black;
+    color: white;
+}
+
+.add_product_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.add_product_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.add_product_dark h2 {
+    color: white !important;
+}
+
+/* editproduct page  */
+
+.edit_product_dark {
+    background-color: black;
+    color: white;
+}
+
+.edit_product_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.edit_product_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.edit_product_dark h2 {
+    color: white !important;
+}
+
+/* contact page  */
+
+.contact_main_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.contact_main_dark h3 {
+    color: white !important;
+}
+
+.contact_main_dark b{
+    background-color: black !important;
+    color: white !important;
+}
+
+.contact_main_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.contact_main_dark textarea {
+    background-color: black;
+    border: 1px solid white;
+}
+
+/* contact side */
+
+.contact_side_dark {
+    background-color: black;
+    color: white !important;
+}
+
+.contact_side_dark svg{
+    color: white !important;
+}
+
+.contact_side_dark b{
+    color: white !important;
+}
+
+/* feedback page  */
+
+.feedback_main_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.feedback_main_dark h3 {
+    color: white !important;
+}
+
+.feedback_main_dark b{
+    background-color: black !important;
+    color: white !important;
+}
+
+.feedback_main_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.feedback_main_dark textarea {
+    background-color: black;
+    border: 1px solid white;
+}
+
+/* leave page  */
+
+.leave_main_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.leave_main_dark h2 {
+    color: white !important;
+}
+
+.leave_main_dark b{
+    background-color: black !important;
+    color: white !important;
+}
+
+.leave_main_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.leave_main_dark textarea {
+    background-color: black;
+    border: 1px solid white;
+}
+
+/* project page  */
+
+.project_dark {
+    background-color: black;
+    color: white;
+}
+
+.project_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.project_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.project_dark textarea {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.project_dark h2 {
+    color: white !important;
+}
+
+/* software page  */
+
+.software_dark {
+    /* background-color: black; */
+    color: white;
+}
+
+.software_child {
+    background-color: black;
+    color: white;
+}
+
+.software_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.software_dark p {
+    background-color: black !important;
+}
+
+.software_dark h2 {
+    color: black !important;
+}
+
+/* contact details  */
+
+.contact_details_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.contact_details_dark h2{
+    color: white !important;
+}
+
+.contact_details_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.contact_details_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.contact_details_dark li {
+    background-color: black;
+}
+
+.contact_details_dark input {
+    background-color: black !important;
+}
+
+
+/* feedback details  */
+
+.feedback_details_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.feedback_details_dark h2{
+    color: white !important;
+}
+
+.feedback_details_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.feedback_details_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.feedback_details_dark li {
+    background-color: black;
+}
+
+.feedback_details_dark input {
+    background-color: black !important;
+}
+
+
+
+/* leave details  */
+
+.leave_details_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.leave_details_dark h2{
+    color: white !important;
+}
+
+.leave_details_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.leave_details_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.leave_details_dark li {
+    background-color: black;
+}
+
+.leave_details_dark input {
+    background-color: black !important;
+}
+
+
+/* employee details  */
+
+.employee_details_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.employee_details_dark h2{
+    color: white !important;
+}
+
+.employee_details_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.employee_details_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.employee_details_dark li {
+    background-color: black;
+}
+
+.employee_details_dark input {
+    background-color: black !important;
+}
+
+
+/* user details  */
+
+.user_details_dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.user_details_dark h2{
+    color: white !important;
+}
+
+.user_details_dark table {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}
+
+.user_details_dark button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.user_details_dark li {
+    background-color: black;
+}
+
+.user_details_dark input {
+    background-color: black !important;
+}
+
+
+/* editproject page  */
+
+.edit_project_dark {
+    background-color: black;
+    color: white;
+}
+
+.edit_project_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.edit_project_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.edit_project_dark textarea  {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.edit_project_dark h2 {
+    color: white !important;
+}
+
+/* editemployee page  */
+
+.edit_employee_dark {
+    background-color: black;
+    color: white;
+}
+
+.edit_employee_dark b {
+    background-color: black !important;
+    color: white !important;
+}
+
+.edit_employee_dark input {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.edit_employee_dark h2 {
+    color: white !important;
+}

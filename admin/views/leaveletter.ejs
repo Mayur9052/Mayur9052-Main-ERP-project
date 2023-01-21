@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Leave Form</title>
+<body style="background-color: #f3f3f3;">
+    <%- include('navbar.ejs') -%>
+    <div class="leave_main" id="leave_body">
+        <form action="/api/admin/leaveletter" method="post">
+        <h2>LEAVE FORM</h2>
+        <div class="leave_detail">
+            <p><b>Employee Name</b><input type="text" name="leave_name" id="leave_name" placeholder="Enter name"required
+></p>
+        </div>
+        <div class="leave_detail">
+            <p style="position: relative; top: -50px;"><b>Employee Email</b><input type="email" name="leave_email" id="leave_pid" placeholder="Enter Email"required
+></p>
+        </div>
+        <div class="leave_detail">
+            <p style="position: relative; top: -70px;"><b>Subject</b><input type="text" name="leave_sub" id="leave_email" placeholder="Enter Subject" required>
+</p>
+        </div>
+        <div class="leave_detail">
+            <p style="position: relative; top: -90px;" id="leave_textarea"><b>Purpose</b><textarea name="leave_purpose" id="leave_purpose" cols="40" rows="7" placeholder="Enter Message"required
+></textarea></p>
+        </div>
+        <input type="submit" name="submit" id="leave_button">
+    </form>
+    </div>
+    <script src="/js/leave.js"> </script>
+
+</body>
+</html>

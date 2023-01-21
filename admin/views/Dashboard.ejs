@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Dashboard</title>
+<body style="background-color: #f4f4f4;">
+    <%- include('navbar.ejs') -%>
+    <div class="dash_body">
+        <h2 class="text-white">Account Dashboard</h2>
+
+        <div class="dash_bills" id="dash_bills">
+            <div class="bill" id="bills_one">
+                <p>Total Outgoing Bills</p>
+                <a href="#" class="dash_link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                  </svg></a>
+
+                <b id="bill1"> </b> <i style="color: white;">( since last month )</i>
+                <p class="dash_percentage text-success"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up text-white" id="percent" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg><b style="color: white;" id="per1"></b></p>
+            </div>
+            <div class="bill" id="bills_two">
+                <p>Total ingoing Bills</p>
+                <a href="#" class="dash_link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                  </svg></a>
+                <b id="bill2"></b><i style="color: white;">( since last month )</i>
+                <p class="dash_percentage text-success"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up text-white" id="percent" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg><b style="color: white;" id="per2"></b></p>
+            </div>
+            <div class="bill" id="bills_three">
+                <p>Total Outgoing payment</p>
+                <a href="#" class="dash_link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                </svg></a>
+                <b id="bill3"></b><i style="color: white;">( since last month )</i>
+                <p class="dash_percentage text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down text-white" id="percent" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                  </svg><b style="color: white;" id="per3"></b></p>
+            </div>
+            <div class="bill" id="bills_four">
+                <p>Total Outgoing payment</p>
+                <a href="#" class="dash_link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots text-white" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                </svg></a>
+                <b id="bill4"></b><i style="color: white;">( since last month )</i>
+                <p class="dash_percentage text-success"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up text-white" id="percent" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg><b style="color: white;" id="per4"></b></p>
+            </div>
+        </div>
+
+        <div class="dash_container" id="dash_body_dark">
+            <h5>Profit and Loss</h5>
+            <div class="dash_container_sider">
+                <a href="#" class="dash_container_filter"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                    <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                  </svg></a>
+                  <a href="#" class="dash_container_link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                </svg></a>
+            </div>
+
+            <div class="dash_container_income">
+                <div class="income">
+                    <p>Total income this year</p>
+                    <b class="text-success" id="pro_loss1"></b> 
+                    <button class="dash_minus">-</button>
+                </div>
+                <div class="income">
+                    <p>Total Expensive this year</p>
+                    <b class="text-danger" id="pro_loss2"></b>    
+                    <button class="dash_equal">=</button>
+                </div>
+                <div class="income">
+                    <p>Total profit this year</p>
+                    <b class="text-success" id="pro_loss3"></b> 
+                </div>
+            </div>
+            <div class="dash_charts_one" >
+                <canvas id="myChart" class="dash_charts" style="width: 150px; height: 30px;"></canvas>
+            </div>
+            <div class="dash_charts_two" style="height: 20px; width: 560px;">
+                <canvas id="myChart1" class="dash_charts_line" ></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/sample.js"></script>
+    <script src="/js/color.js"></script>  
+    <script src="/js/random.js"></script>
+</body>
+</html>

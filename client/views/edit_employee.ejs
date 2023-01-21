@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Edit Employee</title>
+<body >
+    <%- include('navbar.ejs') -%>
+
+    <div class="edit_main">
+        <div class="edit_details">
+            <h2>Edit Personal Information</h2>
+            <form action="/api/client/edit_employee/<%= Employee_details.id %>" method="post">
+                     <div class="edit_detail">
+                <p ><b>Name</b><input type="text" name="signup_name" id="email" placeholder="Enter Name" value="<%= Employee_details.name %>" required></p>
+            </div>
+            <div class="edit_detail">
+                <p ><b>Department</b><input type="text" name="signup_department" id="pid" placeholder="Enter Department" value="<%= Employee_details.department %>" required ></p>
+            </div>
+            
+            <div class="edit_detail">
+                <p ><b>Mobile No</b><input type="text" name="signup_mobileno"id="mobile" placeholder="Enter Mobile No" value="<%= Employee_details.mobileno %>" required ></p>
+            </div>
+            <div class="edit_detail">
+                <p ><b>Gender</b><input type="text" name="signup_gender" id="mobile" placeholder="Enter Gender" value="<%= Employee_details.gender %>" required ></p>
+            </div>
+            <div class="edit_detail">
+                <p ><b>DOB</b><input type="text" name="signup_dob"  placeholder="Enter DD/MM/YYYY" value="<%= Employee_details.dov %>" required></p>
+            </div>
+        </div>
+        <div class="edit_details_two">
+           
+            <div class="edit_detail1">
+                <p style="position: relative; top: -30px;"><b>Age</b><input type="text" name="signup_age" id="name" placeholder="Enter Age" value="<%= Employee_details.age %>" required ></p>
+            </div>
+            <div class="edit_detail1">
+                <p style="position: relative; top: -28px;"><b>Area of Interest</b><input type="text" name="signup_interest" id="department" placeholder="Enter Interest" value="<%= Employee_details.interest %>" required ></p>
+            </div>
+            <div class="edit_detail1">
+                <p style="position: relative; top: -23px;"><b>Experience</b><input type="text" name="signup_Experience" id="email" placeholder="Enter Experience" value="<%= Employee_details.experience %>" required ></p>
+            </div>
+            <div class="edit_detail1">
+                <p style="position: relative; top: -20px;"><b>Qualification</b><input type="text" name="signup_qualification" id="pid" placeholder="Enter Qualification" value="<%= Employee_details.qualification %>" required ></p>
+            </div>
+        </div>
+            <input type="submit" name="Edit" id="edit_button"> 
+        </form>
+        </div>
+
+</body>
+</html>

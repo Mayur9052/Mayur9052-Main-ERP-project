@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('header.ejs') -%>
+    <title>Feedback</title>
+
+    <style>
+        #feed_back_img {
+            background-image: url("/img/contact.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+<body id="feed_back_img">
+    <%- include('navbar.ejs') -%>
+    <div class="feedback_main" id="feedback_body">
+        <div class="feedback_details">
+            <h3>FEEDBACK US</h3>
+            <form action="/api/client/feedback" method="post">
+                <div class="feedback_detail">
+                    <p><b>Name</b><input type="text" name="feedback_name" id="feedback_name" placeholder="Enter Name" required></p>
+                </div>
+                <div class="feedback_detail">
+                    <p style="position: relative; top: -15px;"><b>Email</b><input type="email" name="feedback_email" id="feedback_email" placeholder="Enter Email" required></p>
+                </div>
+                <div class="feedback_detail">
+                    <p style="position: relative; top: -45px;"><b id="feedback_message">Message </b><textarea name="feedback_mess" id="feedback_mess" cols="41" rows="7" placeholder="Enter Message" required></textarea></p>
+                </div>
+                <input type="submit" name="Send Feedback" id="feedback_button">
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/feedback.js"></script>
+
+</body>
+</html>

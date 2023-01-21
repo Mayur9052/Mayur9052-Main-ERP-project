@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('header.ejs') -%>
+    <title>Add Project</title>
+</head>
+<body style="background-color: #f3f3f3;">
+  <%- include('navbar.ejs') -%>
+    
+    <div class="project_main" id="edit_project_dark">
+        <h2>EDIT PROJECT</h2>
+
+        <div class="project_details">
+            <form action="/api/admin/edit_project/<%= software_details.id %>" method="post">
+                <input type="text" name="proj_name" placeholder="Enter Name" value="<%= software_details.name %>"><b>Full Name</b>
+                <br>
+                <input type="email" name="project_email" placeholder="Enter Email" value="<%= software_details.email %>"><b>Email</b>
+                <br>
+                <input type="text" name="project_name" placeholder="Enter Project Name" value="<%= software_details.projectname %>"><b>Project Name</b>
+                <br>
+                <textarea type="text" name="project_language" cols="40" rows="7" placeholder="Enter Languages" ><%= software_details.languages %></textarea><b id="pro_b1">Languages</b>
+                <br>
+                
+                <div class="project_report">
+                    <input type="link" name="project_link" placeholder="Enter Project Name" value="<%= software_details.link %>"><b id="project_b2">Project Link</b>
+                    <br>
+                    <textarea typr="text" name="project_report" cols="40" rows="13"><%= software_details.report %></textarea><b>Project Report</b>
+                </div>
+                
+                <input type="submit"  name="Edit" id="project_btn">
+            </form>    
+        </div>
+    </div>
+
+    <script src="/js/editproject.js"> </script>
+
+</body>
+</html>
